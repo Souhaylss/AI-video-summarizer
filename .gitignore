@@ -1,3 +1,9 @@
 # environnement variable files
 .env 
 .env.test
+
+# cache files
+__pycache__/
+
+# run file
+tempCodeRunnerFile.py

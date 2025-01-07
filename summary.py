@@ -3,10 +3,10 @@ from dotenv import load_dotenv
 from os import getenv
 from transcript import getTextTranscript
 
-load_dotenv()
-API_KEY = getenv("API_KEY_GEM")
+load_dotenv() # load env variables located in .env file
+API_KEY = getenv("API_KEY_GEM") # api key stored in .env file
 
-genai.configure(api_key=API_KEY)
+genai.configure(api_key=API_KEY) 
 model = genai.GenerativeModel("gemini-1.5-flash")
 videoUrl = "https://www.youtube.com/watch?v=J8hzJxb0rpc&pp=ygUOd29ybGQgd2lkZSB3ZWI%3D"
 videoTranscript = getTextTranscript(videoUrl)
