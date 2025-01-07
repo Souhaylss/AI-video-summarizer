@@ -1,0 +1,3 @@
+# environnement variable files
+.env 
+.env.test
