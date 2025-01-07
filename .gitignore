@@ -5,5 +5,8 @@
 # cache files
 __pycache__/
 
+#test folder
+/test
+
 # run file
 tempCodeRunnerFile.py
