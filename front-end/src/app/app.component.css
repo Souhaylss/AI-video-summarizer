@@ -2,6 +2,6 @@
     height: 100vh;
     display : flex;
     flex-direction: column;
-    row-gap: 100px;
+    row-gap: 75px;
     align-items: center;
 }

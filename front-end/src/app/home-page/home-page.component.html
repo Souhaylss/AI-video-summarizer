@@ -1,7 +1,7 @@
 <div id="main-content">
   <img src="logo.png" />
   <form (ngSubmit)="submitForm()" id="summarize-form">
-    <label for="inputText"> Video URL : </label>
+    <label for="inputText"> Video URL </label>
     <input
       type="text"
       id="url-input"
@@ -24,7 +24,7 @@
   </div>
   } 
   @else if(isValidUrl){
-  <div [innerHTML]="summary"></div>
+  <div [innerHTML]="summary" id="summary"></div>
   } @else{
   <p class="error">{{ errorMessage }}</p>
   }
