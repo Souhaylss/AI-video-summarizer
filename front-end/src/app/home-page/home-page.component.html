@@ -1,14 +1,21 @@
-<h1> Youtube Video Summarizer </h1>
-<form (ngSubmit)="submitForm()">
-  <label for="inputText"> Enter Video Url : </label>
-  <input type="text" id="inputText" [(ngModel)]="videoUrl" name="inputText" required/>
-  <button type="submit">Submit</button>
-</form>
-
+<div id="main-content">
+  <img src="logo.png" />
+  <form (ngSubmit)="submitForm()" id="summarize-form">
+    <label for="inputText"> Video URL : </label>
+    <input
+      type="text"
+      id="url-input"
+      [(ngModel)]="videoUrl"
+      name="inputText"
+      placeholder="Paste your YouTube link here..."
+      required
+    />
+    <button type="submit" id="summarize-btn">Summarize</button>
+  </form>
 
   @if(isValidUrl && summary){
-    <div [innerHTML]="summary"></div>
+  <div [innerHTML]="summary"></div>
+  } @else{
+  <p class="error">{{ errorMessage }}</p>
   }
-  @else{
-    <div>{{errorMessage}}</div>
-  }
+</div>

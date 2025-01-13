@@ -1,0 +1,7 @@
+#page-container{
+    height: 100vh;
+    display : flex;
+    flex-direction: column;
+    row-gap: 100px;
+    align-items: center;
+}
