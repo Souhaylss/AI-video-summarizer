@@ -15,6 +15,6 @@ Just enter the video URL and it does the work for you !
 3. Navigate to the **front-end** directory
 4. Enter the following command in the terminal to install dependecies and serve the website on a new window :
    ```
-     npm ci
-     ng serve -o
+   npm ci
+   ng serve -o
    ```
