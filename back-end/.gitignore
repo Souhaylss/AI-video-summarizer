@@ -1,5 +1,4 @@
 # environnement variable files
-.env 
 .env.test
 
 # cache files
