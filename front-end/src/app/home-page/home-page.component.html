@@ -13,7 +13,17 @@
     <button type="submit" id="summarize-btn">Summarize</button>
   </form>
 
-  @if(isValidUrl && summary){
+  @if(isLoading){
+  <div id="loading-container">
+    <div id="loading-description">Loading ...</div>
+    <div class="loader-container">
+      <div class="loader">
+        <div class="inner-circle"></div>
+      </div>
+    </div>
+  </div>
+  } 
+  @else if(isValidUrl){
   <div [innerHTML]="summary"></div>
   } @else{
   <p class="error">{{ errorMessage }}</p>

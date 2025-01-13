@@ -12,6 +12,7 @@ export class HomePageComponent {
   baseUrl = "http://127.0.0.1:5000";
   videoUrl: string = "";
   isValidUrl : boolean = false;
+  isLoading : boolean = false;
   summary: string | null = null;
   errorMessage: string | null = null;
 
@@ -19,12 +20,14 @@ export class HomePageComponent {
 
   submitForm(): void {
     // Send GET request with the input text as a query parameter
+    this.isLoading = true;
     this.http
       .post(`${this.baseUrl}`, {videoUrl : this.videoUrl} ,{responseType : 'text' })
       .subscribe({
         next: (data: any) => {
           this.isValidUrl = true
           this.summary = data ;
+          this.isLoading = false;
         },
         error: (err : HttpErrorResponse) => {
           this.isValidUrl = false
